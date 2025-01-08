@@ -1,0 +1,11 @@
+import os
+
+
+# EMBEDDING ENV VARIABLES
+EMBEDDER_NAME = os.getenv("EMBEDDER_NAME", "all-MiniLM-L6-v2")
+DEVICE = os.getenv("DEVICE", "cpu")
+
+# WEAVIATE ENV VARIABLES
+WEAVIATE_HTTP_HOST = os.getenv("WEAVIATE_HTTP_HOST", "http://localhost:8080")
+WEAVIATE_COLLECTION_NAME = os.getenv("COLLECTION_NAME", "hnsl_vec_db")
+MAX_RETRIEVED = os.getenv("MAX_RETRIEVED", 5)

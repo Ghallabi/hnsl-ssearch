@@ -9,8 +9,9 @@ class STextEmbedder:
         embedder_name: str = "all-MiniLM-L6-v2",
         max_length: int = 128,
         overlap: int = 20,
+        device=torch.device("cpu"),
     ):
-        self.embedder = SentenceTransformer(embedder_name)
+        self.embedder = SentenceTransformer(embedder_name, device=device)
         self.max_length = max_length
         self.overlap = overlap
 

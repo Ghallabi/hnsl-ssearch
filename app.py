@@ -1,4 +1,4 @@
 import streamlit as st
 
-
-st.title("New app is coming :rocket:")
+text = st.text_area("Type to search")
+print(text)
